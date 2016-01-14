@@ -1,0 +1,1 @@
+1. Run > `npm run tsc` to compile tsc to js

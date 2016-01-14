@@ -2,7 +2,7 @@ import {Component} from 'angular2/core';
 
 @Component({
     selector: 'my-app',
-    templateUrl: 'heroDetails.html'
+    templateUrl: '/ui/heroes/app/heroDetails.html'
 })
 export class AppComponent {
     public title = 'Tour of heroes';
