@@ -4,3 +4,4 @@ spring2/target
 spring2/.idea
 spring2/spring2.iml
 spring2/src/main/webapp/ui/heroes/node_modules
+.idea
