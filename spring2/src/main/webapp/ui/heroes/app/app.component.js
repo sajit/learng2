@@ -16,6 +16,7 @@ System.register(['angular2/core'], function(exports_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
+            //this needs to be resources because of spring
             AppComponent = (function () {
                 function AppComponent() {
                     this.title = 'Tour of heroes';

@@ -6,8 +6,6 @@
 	<script src="<c:url value="/resources/heroes/node_modules/systemjs/dist/system.src.js" />"></script>
 	<script src="<c:url value="/resources/heroes/node_modules/rxjs/bundles/Rx.js" />"></script>
 	<script src="<c:url value="/resources/heroes/node_modules/angular2/bundles/angular2.dev.js" />"></script>
-	<%--<script src="<c:url value="/resources/heroes/app/boot.js" />"></script>--%>
-	<%--<script src="<c:url value="/resources/heroes/app/app.component.js" />"></script>--%>
 
 	<!-- 2. Configure SystemJS -->
 

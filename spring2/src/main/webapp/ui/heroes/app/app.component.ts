@@ -1,8 +1,9 @@
 import {Component} from 'angular2/core';
 
+//this needs to be resources because of spring
 @Component({
     selector: 'my-app',
-    templateUrl: '/ui/heroes/app/heroDetails.html'
+    templateUrl: '/resources/heroes/heroDetails.html'
 })
 export class AppComponent {
     public title = 'Tour of heroes';
