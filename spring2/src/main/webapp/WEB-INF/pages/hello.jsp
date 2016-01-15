@@ -2,10 +2,10 @@
 <html>
 <head>
 	<!-- 1. Load libraries -->
-	<script src="<c:url value="/resources/heroes/node_modules/angular2/bundles/angular2-polyfills.js" />"></script>
-	<script src="<c:url value="/resources/heroes/node_modules/systemjs/dist/system.src.js" />"></script>
-	<script src="<c:url value="/resources/heroes/node_modules/rxjs/bundles/Rx.js" />"></script>
-	<script src="<c:url value="/resources/heroes/node_modules/angular2/bundles/angular2.dev.js" />"></script>
+	<script src="<c:url value="/resources/vendor/angular2-polyfills.js" />"></script>
+	<script src="<c:url value="/resources/vendor/system.src.js" />"></script>
+	<script src="<c:url value="/resources/vendor/Rx.js" />"></script>
+	<script src="<c:url value="/resources/vendor/angular2.dev.js" />"></script>
 
 	<!-- 2. Configure SystemJS -->
 
@@ -13,8 +13,8 @@
 
 		var bootPath = '<c:url value="/resources/heroes/app/boot.js" />';
 		var baseUrl = '<c:url value="/resources/heroes/app/" />';
-		console.log('Base Url', baseUrl);
-		console.log('Bootpath', bootPath);
+		//console.log('Base Url', baseUrl);
+		//console.log('Bootpath', bootPath);
 				System.config({
 					baseUrl : baseUrl,
 					packages: {
