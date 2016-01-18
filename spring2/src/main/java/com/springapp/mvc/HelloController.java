@@ -1,10 +1,9 @@
 package com.springapp.mvc;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,5 +27,31 @@ public class HelloController {
 	@ResponseBody
 	public List<Hero> getHeroes(){
 		return heros;
+	}
+
+	@RequestMapping(value="/hero", method=RequestMethod.GET)
+	public String greetingForm(Model model) {
+		model.addAttribute("hero", new Hero());
+		return "hero";
+	}
+
+	@RequestMapping(value="/hero", method=RequestMethod.POST)
+	public String greetingSubmit(@ModelAttribute Hero hero, Model model) {
+		model.addAttribute("hero", hero);
+
+		heros.add(hero);
+		return "hero";
+	}
+
+	@RequestMapping(value="/hero/{id}", method=RequestMethod.GET)
+	public String editHero(@PathVariable("id") Integer id, Model model){
+		Hero hero = new Hero();
+		for(Hero oldHero : heros){
+			if(id == oldHero.getId()){
+				hero = oldHero;
+			}
+		}
+		model.addAttribute("hero",hero);
+		return "hero";
 	}
 }
