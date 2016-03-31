@@ -11,9 +11,10 @@ interface Hero {
   <h1>{{title}}</h1>
   <ul>
     <li *ngFor="#hero of heroes" (click)="onSelect(hero)">
-      <span>{{hero.id}}</span> {{hero.name}}
+      <span style="background-color: yellowgreen;">{{hero.id}}</span> {{hero.name}}
     </li>
   </ul>
+  <!-- Show this only if selectedHero -->
   <div *ngIf="selectedHero">
     <h2>{{selectedHero.name}} details!</h2>
     <div><label>id: </label>{{selectedHero.id}}</div>
