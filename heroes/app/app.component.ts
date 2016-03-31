@@ -1,25 +1,20 @@
 import {Component} from 'angular2/core';
 
-interface Hero {
-    id: number;
-    name: string;
-}
-
+import {Hero} from './hero';
+import {HeroDetailComponent} from './hero-detail.component';
 @Component({
     selector: 'my-app',
     template:`
-  <h1>{{title}}</h1>
-  <ul>
-    <li *ngFor="#hero of heroes" (click)="onSelect(hero)">
-      <span style="background-color: yellowgreen;">{{hero.id}}</span> {{hero.name}}
-    </li>
-  </ul>
-  <!-- Show this only if selectedHero -->
-  <div *ngIf="selectedHero">
-    <h2>{{selectedHero.name}} details!</h2>
-    <div><label>id: </label>{{selectedHero.id}}</div>
-    <div><label>name: </label>{{selectedHero.name}}</div>
-  </div>
+    <h1>{{title}}</h1>
+    <h2>My Heroes</h2>
+    <ul class="heroes">
+      <li *ngFor="#hero of heroes"
+        [class.selected]="hero === selectedHero"
+        (click)="onSelect(hero)">
+        <span class="badge">{{hero.id}}</span> {{hero.name}}
+      </li>
+    </ul>
+    <my-hero-detail [hero]="selectedHero"></my-hero-detail>
   `
 
 })
@@ -30,7 +25,7 @@ export class AppComponent {
     selectedHero: Hero;
     onSelect(hero:Hero)  {
         this.selectedHero = hero;
-        console.log(this.selectedHero);
+        console.log('Selected Herop',this.selectedHero);
     }
 }
 var HEROES: Hero[] = [
